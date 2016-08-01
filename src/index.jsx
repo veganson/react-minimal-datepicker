@@ -21,7 +21,7 @@ export default class ReactMinimalDatepicker extends React.Component {
     this.years = getArrayOfYears(+props.numberOfYearsToShow || 100);
     this.months = moment.months();
     this.days = getAllDaysOfMonth(_.first(this.years), 0);
-    this.selectedMoment = moment(+props.selected) || moment()
+    this.selectedMoment = props.selected ? moment(+props.selected) : moment()
       .year(_.first(this.years))
       .month(_.first(this.months))
       .date(_.first(this.days))
@@ -33,7 +33,7 @@ export default class ReactMinimalDatepicker extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (+nextProps.selected !== +this.selectedMoment.format('x')) {
+    if (nextProps.selected && (+nextProps.selected !== +this.selectedMoment.format('x'))) {
       this.selectedMoment = moment(+nextProps.selected);
     }
   }
