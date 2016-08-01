@@ -1,6 +1,9 @@
 # react-minimal-datepicker
 [npm](https://www.npmjs.com/package/react-minimal-datepicker)
 
+
+![screenshot](https://api.monosnap.com/rpc/file/download?id=Hum8jUWXFRfe0zwkI8uqcyAqi2xDsO)
+
 **usage:**
 
     npm install --save react-minimal-datepicker
