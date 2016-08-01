@@ -17,3 +17,4 @@
  - containerClassName
  - stylesForYearInput, stylesForMonthInput, stylesForDayInput
  - classNameForYearInput, classNameForMonthInput, classNameForDayInput
+ - selected - timestamp(number or string) that defines datepicker's value
