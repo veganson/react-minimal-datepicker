@@ -32,6 +32,12 @@ export default class ReactMinimalDatepicker extends React.Component {
     this.renderedMonths = this.renderMonths();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (+nextProps.selected !== +this.selectedMoment.format('x')) {
+      this.selectedMoment = moment(+nextProps.selected);
+    }
+  }
+
   onDateChange() {
     if (typeof this.props.onChange === 'function') {
       this.props.onChange(this.selectedMoment.format(this.dateFormatForOnChange));
@@ -145,5 +151,9 @@ ReactMinimalDatepicker.propTypes = {
   classNameForYearInput: PropTypes.string,
   classNameForMonthInput: PropTypes.string,
   classNameForDayInput: PropTypes.string,
-  format: PropTypes.string
+  format: PropTypes.string,
+  selected: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.number
+  ])
 };
