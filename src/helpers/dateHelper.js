@@ -5,8 +5,7 @@ export const getArrayOfYears = (numberOfYearsToShow) => {
   let result = [];
   let currYear = moment().year();
   _.times(numberOfYearsToShow, () => {
-    currYear--;
-    result.push(currYear);
+    result.push(currYear--);
   });
   return result;
 };
