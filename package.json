@@ -1,6 +1,6 @@
 {
   "name": "react-minimal-datepicker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/react-minimal-datepicker.min.js",
   "directories": {
